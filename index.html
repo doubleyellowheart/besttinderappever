@@ -15,7 +15,8 @@
             </div>
         </div>
         <div class="container profile">
-            <img src="img/profile6.jpg" id="photo" alt="" onClick="imgsrc()">
+            <!--<img src="img/profile6.jpg" id="photo" alt="" onClick="imgsrc()">-->
+            
         </div>
         <div class="container profile-description">
             <h3>Андрей, 27 <img class="verification" src="img/correct.png" alt=""></h3>
@@ -26,10 +27,12 @@
                         <img src="img/icons8-restart-50.png" alt="">
                     </div>
                     <div class="col close">
-                        <img src="img/icons8-close-50.png" alt="">
+                        <img src="img/icons8-close-50.png" alt="" onClick="errorClick()">
                     </div>
                     <div class="col super">
-                        <img src="img/icons8-star-filled-50.png" alt="">
+                        <a href="tel:+79998649040"> 
+                            <img src="img/icons8-star-filled-50.png" alt="">
+                        </a>
                     </div>
                     <div class="col like">
                         <img src="img/icons8-favorite-50.png" alt="">
@@ -43,10 +46,14 @@
         <div class="container bottom-menu">
             <div class="row">
                 <div class="col">
-                    <img src="img/icons8-tinder.svg" alt="">
+                    <a href="https://doubleyellowheart.github.io/besttinderappever/">
+                        <img src="img/icons8-tinder.svg" alt="">
+                    </a>
                 </div>
                 <div class="col">
-                    <img src="img/icons8-speech-bubble-50.png" alt="">
+                    <a href="https://t.me/r34kwon">
+                        <img src="img/icons8-speech-bubble-50.png" alt="">
+                    </a>
                 </div>
                 <div class="col">
                     <img src="img/icons8-user-50.png" alt="">
@@ -69,6 +76,16 @@
             image.src = imgs[i - 1];
             i = 0;
         }
+    }
+
+    function randomNumber(min, max){
+        const r = Math.random()*(max-min) + min
+        return Math.floor(r)
+    }
+
+    function errorClick() {
+        var errorText = new Array("Может ты промахнулась?", "Неправильная кнопка", "Нажимай внимательней", "Ответ неверный");
+        alert(errorText[randomNumber(0, 3)]);
     }
 </script>
 </body>
