@@ -10,13 +10,18 @@
 }
 
 .profile {
-    height: 80%;
-    width: 90%;
+    display: block;
+    position: absolute;
+    height: 85%;
+    width: 80%;
+    top: 50px;
+    background-image: url(../img/profile6.jpg);
+    background-size: cover;
 }
 
 .profile img {
     border-radius: 10px;
-    height: 700px;
+    width: 100%;
 }
 
 .restart img {
