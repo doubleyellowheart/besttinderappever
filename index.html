@@ -14,7 +14,7 @@
                 <img src="img/tinder.jpg" alt="">
             </div>
         </div>
-        <div class="container profile">
+        <div class="container profile" id="profile-block" onClick="imgsrc()">
             <!--<img src="img/profile6.jpg" id="photo" alt="" onClick="imgsrc()">-->
             
         </div>
@@ -63,17 +63,18 @@
     </div>
 
 <script language="javascript">
+    
     var i = 1;
-    var image = document.getElementById("photo");
-    var imgs = new Array('img/profile5.jpg', 'img/profile6.jpg');
     
     function imgsrc() {
 
+        var block = document.getElementById('profile-block');
+
         if (i == 0) {
-            image.src = imgs[i + 1];
+            block.style.backgroundImage = 'url(img/profile6.jpg)';
             i = 1;
         } else {
-            image.src = imgs[i - 1];
+            block.style.backgroundImage = 'url(img/profile5.jpg)';
             i = 0;
         }
     }
@@ -87,6 +88,7 @@
         var errorText = new Array("Может ты промахнулась?", "Неправильная кнопка", "Нажимай внимательней", "Ответ неверный");
         alert(errorText[randomNumber(0, 3)]);
     }
+
 </script>
 </body>
 </html>
