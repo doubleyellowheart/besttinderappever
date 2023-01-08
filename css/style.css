@@ -17,6 +17,7 @@
     top: 50px;
     background-image: url(../img/profile6.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .profile img {
