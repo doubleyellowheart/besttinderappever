@@ -11,19 +11,19 @@
 <body>
     <div class="container-fluid fullboard">
         <div class="container header-menu">
-                <img src="./img/tinder.jpg" alt="">
+                <img src="img/tinder.jpg" alt="">
             </div>
         </div>
         <div class="container profile">
-            <img src="/img/profile6.jpg" alt="">
+            <img src="img/profile6.jpg" id="photo" alt="" onClick="imgsrc()">
         </div>
         <div class="container profile-description">
-            <h3>Андрей, 27 <img class="verification" src="/img/correct.png" alt=""></h3>
+            <h3>Андрей, 27 <img class="verification" src="img/correct.png" alt=""></h3>
             <p>Легенда батл-репа 2015 года, обладатель плейлистов со смыслом</p>
             <div class="container profile-menu">
                 <div class="row">
                     <div class="col restart">
-                        <img src="./img/icons8-restart-50.png" alt="">
+                        <img src="img/icons8-restart-50.png" alt="">
                     </div>
                     <div class="col close">
                         <img src="img/icons8-close-50.png" alt="">
@@ -54,5 +54,22 @@
             </div>
         </div>
     </div>
+
+<script language="javascript">
+    var i = 1;
+    var image = document.getElementById("photo");
+    var imgs = new Array('img/profile5.jpg', 'img/profile6.jpg');
+    
+    function imgsrc() {
+
+        if (i == 0) {
+            image.src = imgs[i + 1];
+            i = 1;
+        } else {
+            image.src = imgs[i - 1];
+            i = 0;
+        }
+    }
+</script>
 </body>
 </html>
