@@ -1,0 +1,89 @@
+.fullboard {
+    height: 100%;
+}
+
+.header-menu img {
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile {
+    height: 80%;
+    width: 90%;
+}
+
+.profile img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.restart img {
+    height: 45px;
+    padding: 5px;
+    border: 1px solid orange;
+    border-radius: 90px;
+    margin-top: 5px;
+}
+
+.close img {
+    padding: 5px;
+    height: 55px;
+    border: 1px solid rgb(255, 44, 44);
+    border-radius: 90px;
+}
+
+.super img {
+    height: 45px;
+    padding: 5px;
+    border: 1px solid rgb(84, 142, 229);
+    border-radius: 90px;
+    margin-top: 5px;
+}
+
+.like img {
+    height: 55px;
+    padding: 5px;
+    border: 1px solid rgb(90, 208, 90);
+    border-radius: 90px;
+}
+
+.boost img {
+    height: 45px;
+    padding: 5px;
+    border: 1px solid rgb(125, 97, 196);
+    border-radius: 90px;
+    margin-top: 5px;
+}
+
+.profile-description {
+    display: inline-block;
+    color: white;
+    position: absolute;
+    bottom: 100px;
+}
+
+.profile-description h3, .profile-description p {
+    margin-left: 15px;
+    box-shadow: 15px;
+}
+
+.verification {
+    height: 20px;
+    display: inline-block;
+}
+
+.profile-menu {
+
+}
+
+.bottom-menu {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}
+
+.bottom-menu img {
+    height: 30px;
+}
