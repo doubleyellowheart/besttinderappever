@@ -95,6 +95,5 @@
 
 .description {
     color: black;
-    position: absolute;
-    bottom: 80px;
+    margin-top: 140%;
 }
