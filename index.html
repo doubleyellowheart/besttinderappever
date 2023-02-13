@@ -8,24 +8,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="main">
-        <div class="heart" onclick="onPlayer()">
 
-        </div>
-        <div class="song">
-            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
-            frameborder="0" 
-            height="300" 
-            style="width:300px;overflow:hidden;background:transparent;" 
-            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ru/album/%D0%B1%D1%83%D0%BA%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D0%BF%D0%B8%D0%B2%D1%8B/1595630040?i=1595630607"
-            ></iframe>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="heart" onclick="onPlayer()">
+
+                </div>
+                <div class="song">
+                    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
+                    frameborder="0" 
+                    height="300" 
+                    style="width:300px;overflow:hidden;background:transparent;" 
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ru/album/%D0%B1%D1%83%D0%BA%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D0%BF%D0%B8%D0%B2%D1%8B/1595630040?i=1595630607"
+                    ></iframe><br>
+                    <div id="result">
+
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
-    <div class="result" id="result">
 
-    </div>
+
+
+
     <style>
         body {
             margin: 0;
@@ -33,23 +45,21 @@
             background-color: #F8F8FA;
             font-family: 'Roboto', sans-serif;
         }
-
-        .main {
-            display: flex;
-        }
-
         .heart {
+            margin: auto;
             height: 300px;
             width: 300px;
             background-image: url("https://www.svgrepo.com/show/444819/heart.svg");
             background-size: cover;
-            display: flex;
-            justify-content: flex-end;
-            align-items: end;
         }
         
         .song {
             display: none;
+            margin: auto;
+            height: 300px;
+            width: 300px;
+            justify-content: center;
+            align-items: center;
         }
 
         .result {
@@ -67,9 +77,9 @@
             let result = document.querySelector('.result');
 
             heart.style.display = "none";
-            song.style.display = "flex";
+            song.style.display = "block";
 
-            let text = "Мы прошли через всё с тобой пару раз \nИ вместе дальше пойдём, ещё раз пройдя \nПусть сломалось перо, струна порвалась \nЕсли песня – о любви, значит, про тебя";
+            let text = "Мы прошли через всё с тобой пару раз, и вместе дальше пойдём, ещё раз пройдя. Пусть сломалось перо, струна порвалась, если песня – о любви, значит, про тебя";
             let delay = 100; // cкорость
             let elem = document.getElementById("result");
  
